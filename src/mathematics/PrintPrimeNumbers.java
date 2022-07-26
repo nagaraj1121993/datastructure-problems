@@ -27,6 +27,7 @@ public class PrintPrimeNumbers {
 
     /*
      * Time complexity of this approach is O(n)
+     * Sieve of Eretosthenes
      * */
     public void printPrimeNumbersEfficientApproach(int number) {
         boolean[] array = new boolean[number+1];
