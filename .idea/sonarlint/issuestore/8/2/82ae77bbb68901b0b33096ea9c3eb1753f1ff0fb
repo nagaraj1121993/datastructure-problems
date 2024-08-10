@@ -1,0 +1,12 @@
+
+Q
+java:S1854"6Remove this useless assignment to local variable "s1".(‰Ÿô‡úÿÿÿÿ
+;
+java:S2129" Remove this "String" constructor(‰Ÿô‡úÿÿÿÿ
+B
+java:S1481"'Remove this unused "s1" local variable.(‰Ÿô‡úÿÿÿÿ
+G
+java:S1602#",Remove useless curly braces around statement(âÑşùÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ş£²øÿÿÿÿ
+H
+java:S1144"2Remove this unused private "Employee" constructor.(Æ‚È”
