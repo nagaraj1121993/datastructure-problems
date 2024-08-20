@@ -3,7 +3,7 @@ package stacks;
 public class MyStackTest {
 
     public static void main(String[] args) throws Exception {
-        MyStack myStack = new MyStack(10);
+        MyStack myStack = new MyStack();
         myStack.push(123);
         System.out.println(myStack.top());
         myStack.push(143);
@@ -19,7 +19,6 @@ public class MyStackTest {
         myStack.pop();
         myStack.pop();
         System.out.println(myStack.isEmpty());
-        System.out.println(myStack.isFull());
     }
 
 }

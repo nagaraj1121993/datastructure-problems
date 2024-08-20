@@ -1,49 +1,58 @@
 package stacks;
 
-import java.util.Objects;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyStack {
 
-    private Integer size;
-    private final Integer capacity;
-    private final Object[] stackArray;
+    private final List<Integer> stackArray;
+    private MyStack auxillaryArray;
 
-    public MyStack(Integer capacity) {
-        this.capacity = capacity;
-        this.stackArray = new Integer[capacity];
-        this.size = 0;
+    public MyStack() {
+        this.stackArray = new ArrayList<>();
     }
 
-    public void push(Object element) throws Exception {
-        if(Objects.equals(size, capacity)) {
-            throw new Exception("No size left to add element to stack");
-        }
-        this.stackArray[size] = element;
-        this.size++;
+    public void push(Integer element) throws Exception {
+        this.stackArray.add(element);
     }
 
-    public Object pop() throws Exception {
-        if(size == 0) {
+    public void pop() throws Exception {
+        if(stackArray.isEmpty()) {
             throw new Exception("No element to remove from stack");
         }
-        Object object = this.stackArray[size - 1];
-        this.stackArray[size - 1] = null;
-        this.size--;
-        return object;
+        int size = stackArray.size();
+        this.stackArray.remove(this.stackArray.get(size - 1));
     }
 
-    public Object top() {
-        return this.stackArray[size - 1];
+    public Integer top() {
+        return this.stackArray.get(this.stackArray.size() - 1);
     }
 
     public Boolean isEmpty() {
-        return size == 0;
+        return stackArray.isEmpty();
     }
 
-    public Boolean isFull() {
-        return Objects.equals(size, capacity);
+    public Integer size() { return stackArray.size(); }
+
+    public void pushMin(Integer element) throws Exception {
+        this.stackArray.add(element);
+        if(auxillaryArray.top() >= this.top()) {
+            auxillaryArray.push(this.top());
+        }
     }
 
-    public Integer size() { return size; }
+    public void popMin() throws Exception {
+        if(stackArray.isEmpty()) {
+            throw new Exception("No element to remove from stack");
+        }
+        if(this.top() == auxillaryArray.top()) {
+            auxillaryArray.pop();
+        }
+        this.pop();
+    }
+
+    public Integer getMin() {
+        return auxillaryArray.top();
+    }
 
 }
