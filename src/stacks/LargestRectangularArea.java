@@ -9,7 +9,7 @@ public class LargestRectangularArea {
         System.out.println(printLargestRectangularArea(arr));
     }
 
-    private static int printLargestRectangularArea(int[] arr) {
+    public static int printLargestRectangularArea(int[] arr) {
         int n = arr.length;
         ArrayDeque<Integer> stack = new ArrayDeque<>();
         int res = 0;
