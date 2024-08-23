@@ -41,7 +41,7 @@ public class CustomDoublyLinkedlist {
         }
     }
 
-    public void removeBegin(Object object) {
+    public void removeBegin() {
         if(head == null) {
             throw new RuntimeException("LinkedList is empty");
         } else {
@@ -51,7 +51,7 @@ public class CustomDoublyLinkedlist {
         }
     }
 
-    public void removeEnd(Object object) {
+    public void removeEnd() {
         if(head == null) {
             throw new RuntimeException("LinkedList is Empty");
         } else {

@@ -3,7 +3,7 @@ package linkedlist;
 public class CustomLinkedListTest {
 
     public static void main(String[] args) {
-        CustomLinkedList linkedList = new CustomLinkedList();
+        CustomDoublyLinkedlist linkedList = new CustomDoublyLinkedlist();
         linkedList.addEnd(12);
         linkedList.addEnd(32);
         linkedList.addEnd(52);
