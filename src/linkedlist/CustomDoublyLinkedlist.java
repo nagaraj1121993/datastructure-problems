@@ -68,7 +68,7 @@ public class CustomDoublyLinkedlist {
             System.out.println("No Elements in LinkedList");
         } else {
             while (head.next != null) {
-                System.out.print(head.data);
+                System.out.print(head.data + " ");
                 head = head.next;
             }
         }

@@ -15,8 +15,8 @@ public class CustomLinkedListTest {
 //        linkedList.addBegin(155);
 //        System.out.println("ADD BEGIN");
 //        linkedList.printList();
-        linkedList.removeBegin();
-        System.out.println("REMOVE BEGIN");
+//        linkedList.removeBegin();
+//        System.out.println("REMOVE BEGIN");
         linkedList.printList();
 //        linkedList.removeLast();
 //        System.out.println("REMOVE LAST");
