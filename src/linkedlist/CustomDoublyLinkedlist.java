@@ -63,13 +63,36 @@ public class CustomDoublyLinkedlist {
         }
     }
 
+    public void reverseList() {
+        if(head == null) {
+            return;
+        } else {
+            Node temp = head;
+            Node refNext = null;
+            Node refPrev = null;
+            Node finalNode = null;
+            while(temp != null) {
+                refNext = temp.next;
+                refPrev = temp.prev;
+                temp.prev = refNext;
+                temp.next = refPrev;
+                finalNode = temp.next;
+                temp = temp.prev;
+            }
+            if(finalNode != null) {
+                head = finalNode.prev;
+            }
+        }
+    }
+
     public void printList() {
         if(head == null) {
             System.out.println("No Elements in LinkedList");
         } else {
-            while (head.next != null) {
-                System.out.print(head.data + " ");
-                head = head.next;
+            Node temp = head;
+            while (temp != null) {
+                System.out.print(temp.data + " ");
+                temp = temp.next;
             }
         }
     }

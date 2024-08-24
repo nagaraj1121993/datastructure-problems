@@ -9,16 +9,19 @@ public class CustomLinkedListTest {
         linkedList.addEnd(52);
         linkedList.addEnd(72);
         linkedList.addEnd(92);
-        System.out.println("ADD END");
-        linkedList.printList();
-//        linkedList.addBegin(122);
-//        linkedList.addBegin(155);
-//        System.out.println("ADD BEGIN");
+//        System.out.println("ADD END");
 //        linkedList.printList();
+        linkedList.addBegin(122);
+        linkedList.addBegin(155);
+        linkedList.printList();
+        System.out.println("PRINT REVERSING");
+        linkedList.reverseList();
+//        System.out.println("ADD BEGIN");
+        linkedList.printList();
 //        linkedList.removeBegin();
 //        System.out.println("REMOVE BEGIN");
-        linkedList.printList();
-//        linkedList.removeLast();
+//        linkedList.printList();
+//        linkedList.removeEnd();
 //        System.out.println("REMOVE LAST");
 //        linkedList.printList();
     }
