@@ -84,4 +84,38 @@ public class CustomCircularLinkedList {
         } while (temp != head);
     }
 
+    public Node removeKthElement(int k) {
+        if(getLength() < k) {
+            throw new RuntimeException("Index greater than length");
+        }
+        Node temp = head;
+        Node prev = null;
+        Node next = null;
+        int counter = 0;
+        do {
+            counter++;
+            if(k == 1) {
+                removeBeginSLL();
+                break;
+            }
+            if(counter == k) {
+                prev.next = temp.next;
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+        } while (temp != head);
+        return head;
+    }
+
+    public Integer getLength() {
+        Node temp = head;
+        int size = 0;
+        do {
+            size++;
+            temp = temp.next;
+        } while (temp != head);
+        return size;
+    }
+
 }
