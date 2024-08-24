@@ -3,25 +3,26 @@ package linkedlist;
 public class CustomLinkedListTest {
 
     public static void main(String[] args) {
-        CustomDoublyLinkedlist linkedList = new CustomDoublyLinkedlist();
-        linkedList.addEnd(12);
-        linkedList.addEnd(32);
-        linkedList.addEnd(52);
-        linkedList.addEnd(72);
-        linkedList.addEnd(92);
-//        System.out.println("ADD END");
-//        linkedList.printList();
-        linkedList.addBegin(122);
-        linkedList.addBegin(155);
+        CustomCircularLinkedList linkedList = new CustomCircularLinkedList();
+        linkedList.addEndSLL(12);
+//        linkedList.addEndSLL(32);
+//        linkedList.addEndSLL(52);
+//        linkedList.addEndSLL(72);
+//        linkedList.addEndSLL(92);
+        System.out.println("ADD END");
         linkedList.printList();
-        System.out.println("PRINT REVERSING");
-        linkedList.reverseList();
+//        linkedList.addBeginSLL(122);
+//        linkedList.addBeginSLL(155);
 //        System.out.println("ADD BEGIN");
-        linkedList.printList();
-//        linkedList.removeBegin();
-//        System.out.println("REMOVE BEGIN");
 //        linkedList.printList();
-//        linkedList.removeEnd();
+//        System.out.println("PRINT REVERSING");
+//        linkedList.reverseList();
+//        System.out.println("ADD BEGIN");
+//        linkedList.printList();
+        linkedList.removeBeginSLL();
+        System.out.println("REMOVE BEGIN");
+        linkedList.printList();
+//        linkedList.removeEndSLL();
 //        System.out.println("REMOVE LAST");
 //        linkedList.printList();
     }

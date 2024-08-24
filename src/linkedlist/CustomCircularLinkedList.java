@@ -25,6 +25,7 @@ public class CustomCircularLinkedList {
             Node temp = head;
             head = new Node(object);
             head.next = temp;
+            tail.next = head;
         }
     }
 
@@ -44,7 +45,7 @@ public class CustomCircularLinkedList {
         }
     }
 
-    public void removeBeginSLL(Object object) {
+    public void removeBeginSLL() {
         if(head == null) {
             throw new RuntimeException("LinkedList is empty");
         } else {
@@ -58,7 +59,7 @@ public class CustomCircularLinkedList {
         }
     }
 
-    public void removeEndSLL(Object object) {
+    public void removeEndSLL() {
         if(head == null) {
             throw new RuntimeException("LinkedList is empty");
         } else {
@@ -73,9 +74,12 @@ public class CustomCircularLinkedList {
     }
 
     public void printList() {
+        if(head == null) {
+            throw new RuntimeException("LinkedList is empty");
+        }
         Node temp = head;
         do {
-            System.out.println(temp.data);
+            System.out.print(temp.data + " ");
             temp = temp.next;
         } while (temp != head);
     }
